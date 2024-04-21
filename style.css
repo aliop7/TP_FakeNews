@@ -1,6 +1,5 @@
 body {
     font-family: "Source Sans 3", sans-serif;
-    text-align: center;
     letter-spacing: 0.1em;
     display: flex;
     flex-direction: column;
@@ -16,51 +15,52 @@ body {
     padding-top: 60px;
     z-index: 1;
     transition: left 0.3s ease;
-    }
-    
-    .sidenav a {
+}
+
+.sidenav a {
     display: block;
     padding: 8px 32px 8px 8px;
     text-decoration: none;
     color: #818181;
     transition: color 0.3s;
-    }
-    
-    .sidenav ul {
+}
+
+.sidenav ul {
     margin: 0;
     padding: 0;
-    }
-    
-    .sidenav.active {
+}
+
+.sidenav.active {
     left: 0;
-    }
-    
-    .sidenav .close {
+}
+
+.sidenav .close {
     position: absolute;
     top: 0;
     font-size: 36px;
-    }
-    
-    .burger-container {
+}
+
+.burger-container {
+    display: none;
     position: absolute;
-    margin: 8px;
+    margin: 15px;
     box-sizing: content-box;
     background-color: #e5e5e5;
     width: 20px;
-    padding: 10px 25px;
+    padding: 7px 20px;
     border-radius: 4px;
-    border-bottom: 2px solid #888888;
-    border-right: 2px solid #888888;
-    }
-    
-    .burger-icon span {
+    border-bottom: 2px solid #a1a1a1;
+    border-right: 2px solid #a1a1a1;
+}
+
+.burger-icon span {
     display: block;
     width: 20px;
     height: 3px;
     margin: 4px 0;
     background-color: #888888;
     border-radius: 4px;
-    }
+}
     
 .container {
     padding: 10rem 1.75rem 5rem 1.75rem;
@@ -83,10 +83,6 @@ body {
     border-bottom: 2px solid #E5E5E5;
 }
 
-.rounded {
-    border-radius: 4px;
-}
-
 .display-flex {
     display: flex;
 }
@@ -98,6 +94,10 @@ body {
 img {
     width: auto;
     border: 5px solid #E5E5E5;
+}
+
+.rounded {
+    border-radius: 4px;
 }
 
 .text-underline {
@@ -132,10 +132,6 @@ form input, textarea {
     border-radius: 4px;
 }
 
-form input, textarea:focus {
-    outline: none;
-}
-
 button {
     font-size: 14px;
     display: flex;
@@ -161,17 +157,33 @@ footer {
 
 .item {
     position: relative;
-    padding-left: 30px;
+    padding-left: 40px;
     margin-bottom: 10px;
+    margin-top: 15px;
 }
 
 .item::before {
-    font-family: "Font Awesome 6 Pro";
+    font-family: FontAwesome;
     font-weight: 900;
     position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #ccc;
+    padding-left: 2px;
+}
+
+footer > .container > div:nth-child(3) {
+    border-top: 2px solid #e5e5e5;
+    padding-top: 5rem; 
+}
+
+.error {
+    border: 1px solid #CC0000;
 }
 
 /* Fontawesome icons */
@@ -372,8 +384,21 @@ footer {
 .flex-grow-3 { flex-grow: 3; }
 
 @media only screen and (max-width: 767px) {
+
+    .burger-container {
+        display: block;
+    }
+
+    .container {
+        padding: 3rem 0.75rem 5rem 0.75rem;
+    }
+
     .sm\:flex-direction-column {
         flex-direction: column;
+    }
+
+    .sm\:flex-direction-row {
+        flex-direction: row;
     }
 
     .sm\:display-flex {
@@ -390,5 +415,9 @@ footer {
 
     .sm\:m-0 {
         margin: 0;
+    }
+
+    .sm\:m-3 { 
+        margin: 1rem; 
     }
 }
