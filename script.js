@@ -19,6 +19,8 @@ function closeNav() {
 function checkForm() {
   const formElements = document.querySelectorAll('form > input, form > textarea');
 
+  let success = true
+
   formElements.forEach(element => {
     if (element.value == '')
     {
@@ -28,6 +30,10 @@ function checkForm() {
       labelElement.style.color = "#CC0000";
 
       element.classList.add('error')
+
+      success = false;
     }
   });
+
+  return success;
 }

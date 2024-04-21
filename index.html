@@ -196,7 +196,7 @@
         <h2 class="pb-5 font-weight-medium text-center">DES QUESTIONS ? <span class="font-weight-bold">CONTACTEZ-NOUS:</span></h2>
         <div class="pb-5 display-flex sm:flex-direction-column">
           <div class="flex-grow-2 p-3">
-            <form action="/" onclick="checkForm()">
+            <form action="/" onsubmit="return checkForm()"  method="post">
               <label class="font-size-xs" for="name"></label>
               <input type="text" id="name" name="name" placeholder="Nom" />
               <label class="font-size-xs" for="email"></label>
